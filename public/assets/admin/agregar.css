@@ -1,0 +1,130 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+background: #f5f5f5;
+color: #2d3748;
+}
+
+.header {
+background: white;
+border-bottom: 1px solid #e2e8f0;
+padding: 1.5rem 0;
+position: sticky;
+top: 0;
+z-index: 100;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+header a{
+text-decoration: none;
+color: white;
+}
+
+.header-container {
+max-width: 1400px;
+margin: 0 auto;
+padding: 0 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 1.75rem;
+font-weight: 700;
+color: #1a202c;
+}
+
+.logo span {
+color: #2ecc71;
+}
+
+.nav-tabs {
+display: flex;
+gap: 0.5rem;
+ margin-left: 100px;   
+}
+
+.nav-tabs.bicicleta{
+ margin-left: 130px;
+}
+
+.nav-tab {
+padding: 0.75rem 2rem;
+background: transparent;
+border: none;
+color: #4a5568;
+font-size: 1rem;
+font-weight: 500;
+cursor: pointer;
+border-radius: 8px;
+transition: all 0.3s ease;
+position: relative;
+}
+
+.nav-tab:hover {
+background: #f7fafc;
+color: #2ecc71;
+}
+
+.nav-tab.active {
+color: #2ecc71;
+background: #f0fff4;
+}
+
+.nav-tab.active::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 40px;
+height: 3px;
+background: #2ecc71;
+border-radius: 3px 3px 0 0;
+}
+
+.user-menu {
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+
+.user-avatar {
+width: 42px;
+height: 42px;
+border-radius: 50%;
+background: linear-gradient(135deg, #2ecc71, #27ae60);
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-weight: 600;
+font-size: 1rem;
+}
+
+.container h1{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.container form.registrar{
+    box-shadow: 0 0 10px #bdbdbd;
+    border-radius: 20px;
+    padding: 30px;
+    background: white;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.container form button{
+    background: #2ecc71 !important;
+    border: none;
+    width: 100%;
+}
