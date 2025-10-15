@@ -1597,9 +1597,15 @@ section,
   box-shadow: 0 20px 40px color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
+.about .image-wrapper img.main-image{
+  height: 600px;
+  width: 800px;
+  margin-bottom: 180px;
+}
+
 .about .image-wrapper .floating-card {
   position: absolute;
-  bottom: 30px;
+  bottom: 210px;
   left: -20px;
   background-color: var(--surface-color);
   border-radius: 15px;
@@ -2458,6 +2464,68 @@ section,
   box-shadow: 0 10px 40px color-mix(in srgb, var(--heading-color), transparent 90%);
 }
 
+.services .service-card img{
+  width: 300px;
+  margin-left: 10px;
+}
+
+.services .service-card h2{
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.services .service-card h2 span.estado{
+  color:var(--accent-color);
+}
+
+#bicicletas a.button{
+  width: 140px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: var(--accent-color);
+  border-radius: 30px;
+  color: rgb(19, 19, 19);
+  font-weight: 600;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  padding-left: 8px;
+  transition-duration: .5s;
+  margin-top: 70px !important;
+  margin: 0 auto;
+}
+
+#bicicletas a.button .svgIcon {
+  height: 25px;
+  transition-duration: 1.5s;
+  margin-left: 8px;
+}
+
+#bicicletas a.button .bell path {
+  fill: rgb(19, 19, 19);
+}
+
+#bicicletas a.button:hover {
+  background-color: #13db8f;
+  transition-duration: .5s;
+}
+
+#bicicletas a.button:active {
+  transform: scale(0.97);
+  transition-duration: .2s;
+}
+
+#bicicletas a.button:hover .svgIcon {
+  transform: rotate(250deg);
+  transition-duration: 1.5s;
+}
+
+
 .services .service-card:hover {
   transform: translateY(-15px);
   box-shadow: 0 25px 60px color-mix(in srgb, var(--accent-color), transparent 80%);
@@ -2465,7 +2533,7 @@ section,
 
 .services .service-card:hover .service-bg {
   opacity: 1;
-  transform: scale(1.2) rotate(15deg);
+  transform: scale(1.8) rotate(15deg);
 }
 
 .services .service-card:hover .service-icon {
