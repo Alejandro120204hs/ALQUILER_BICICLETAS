@@ -5523,3 +5523,20 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+footer .social-links{
+  margin-bottom: 30px;
+}
+
+footer a.contacto{
+  border: 2px solid var(--accent-color);
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: var(--accent-color);
+  color: white;
+}
+
+footer a.contacto:hover{
+  background: #000;
+  border: 2px solid var(--accent-color);
+}
