@@ -12,10 +12,11 @@
     $identificacion = $_POST['identificacion'];
     $clave = md5($_POST['clave']);
     $rol = "aprendiz";
+    $estrato = $_POST['estrato'];
 
     // PRPGRAMACION ORIENTADA A OBJETOS
     // ACCDEMOS A LA FUNCION
     $objetoUsuario = new Usuario();
-    $objetoUsuario -> insertarUsuario($nombres,$apellidos,$email,$telefono,$identificacion,$clave,$rol);
+    $objetoUsuario -> insertarUsuario($nombres,$apellidos,$email,$telefono,$identificacion,$clave,$rol,$estrato);
 
 ?>

@@ -1,3 +1,10 @@
+<?php
+    require_once("../../models/conexion.php");
+    require_once("../../models/bicicletas.php");
+    require_once("../../controllers/mostrarBicicletas.php");
+    require_once("../../controllers/sesionCliente.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +19,14 @@
      <header class="header">
         <div class="header-container">
             <div class="logo">
-                <span>Bike</span>Rental
+                <a href="../landing/index.php"><span>Bike</span></a>
             </div>
             <nav class="nav-tabs">
-                <a href="dashboardCliente.html" class="nav-tab active">Bicicletas</a>
-                <a href="dashboardClienteEvento.html" class="nav-tab">Eventos</a>
+                <a href="dashboardCliente.php" class="nav-tab active">Bicicletas</a>
+                <a href="dashboardClienteEvento.php" class="nav-tab">Eventos</a>
             </nav>
             <div class="user-menu">
-                <div class="user-avatar"><a href="">X</a></div>
+                <div class="user-avatar"><a href="../../controllers/cerrarSesion.php">X</a></div>
             </div>
         </div>
     </header>
@@ -32,7 +39,7 @@
             </div>
 
             <div class="bikes-grid">
-                <div class="bike-card">
+                <!-- <div class="bike-card">
                     <div class="bike-image-container">
                         <span class="status-badge status-disponible">Disponible</span>
                         <img src="../../public/assets/landing/img/cicla.png" alt="Bicicleta">
@@ -55,8 +62,13 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
+                <?php
+                    cargarBicicletasCliente();
+                ?>
+            </div>
+        </div>
     </main>
 
 

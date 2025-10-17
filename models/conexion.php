@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     class Conexion{
         public function get_conexion(){
             $user = "root";

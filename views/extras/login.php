@@ -48,7 +48,7 @@
                     Login
                 </button>
             </div>
-									<a href="ressetPasword.html"><p class="forgot">Forgot Password?</p></a>
+									<a href="ressetPasword.php"><p class="forgot">Forgot Password?</p></a>
             <ul class="animate">
                 <li></li>
                 <li></li>
@@ -102,6 +102,13 @@
                 <div class="input-field">
                     <input id="password" type="password" class="validate" name="clave">
                     <label for="password">Password</label>
+                </div>
+            </div>
+
+             <div class="row">
+                <div class="input-field">
+                    <input id="password" type="number" class="validate" name="estrato">
+                    <label for="password">Estrato(1-6)</label>
                 </div>
             </div>
             

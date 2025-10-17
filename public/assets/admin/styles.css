@@ -205,7 +205,7 @@
         }
 
         .status-disponible {
-            background: #2ecc71;
+            background: red;
             color: white;
         }
 
@@ -237,6 +237,45 @@
             padding: 0.5rem 0;
             border-bottom: 1px solid #f7fafc;
             font-size: 0.95rem;
+        }
+        a{
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+
+        a.eliminar{
+            background: red;
+            color: white;
+        }
+        
+        a.editar{
+            background: #27ae60;
+            color: white;
+            margin-left: 10px;
+        }
+
+        /* .table{
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        } */
+
+        .table th.accion{
+            width: 190px;
+
+        }
+
+        
+
+        #tabla_wrapper .dt-button{
+            background: #27ae60;
+            border: none;
+            color: white;            
+        }
+
+        .table{
+            text-align: left;
         }
 
         .bike-detail-label {
@@ -601,6 +640,8 @@
     .header.evento{
         margin-bottom: 50px;
     }
+
+   
 
 
 

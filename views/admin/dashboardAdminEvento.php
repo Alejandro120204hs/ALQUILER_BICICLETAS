@@ -1,3 +1,10 @@
+<?php
+    require_once("../../models/conexion.php");
+    require_once("../../models/eventos.php");
+    require_once("../../controllers/mostrarEventos.php");
+    require_once("../../controllers/sesionAdministrador.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,27 +12,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../public/assets/cliente/styles.css">
+    <link rel="stylesheet" href="../../public/assets/admin/styles.css">
 </head>
 <body>
 
-     <header class="header">
+     <header class="header evento">
         <div class="header-container">
             <div class="logo">
-                <span>Bike</span>Rental
+                <a href="../landing/index.php"><span>Bike</span></a>
             </div>
             <nav class="nav-tabs">
-                <a href="dashboardCliente.html" class="nav-tab">Bicicletas</a>
-                <a href="dashboardClienteEvento.html" class="nav-tab active">Eventos</a>
+                <a href="dashboardAdmin.php" class="nav-tab">Bicicletas</a>
+                <a href="dashboardAdminEvento.php" class="nav-tab active">Eventos</a>
             </nav>
             <div class="user-menu">
-                <div class="user-avatar"><a href="">X</a></div>
+                <h5>Alejandro Hernandez</h5>
+                <div class="user-avatar"><a href="../../controllers/cerrarSesion.php">X</a></div>
             </div>
         </div>
     </header>
-     
+        <div class="evento">
+            <a class="evento" href="agregrarEventoAdmin.php">Registrar Evento</a>
+        </div>
     <div class="container">
-        <div class="row eventos">
+        
+        <!-- <div class="row eventos">
             <div class="col-md-3">
                 <div class="fecha">
                     <h2>25/10/2025</h2>
@@ -38,9 +49,13 @@
                 <h4>Hora:8:00 AM</h4>
             </div>
             <div class="col-md-3">
-                <button>Inscribirse</button>
+                <a href="" class="eliminar">Eliminar</a>
+                <a href="" class="editar">Editar</a>
             </div>
-        </div>
+        </div> -->
+        <?php
+            cargarEventosAdmin();
+        ?>
     </div>
 
   

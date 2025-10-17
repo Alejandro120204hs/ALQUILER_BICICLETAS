@@ -14,25 +14,25 @@
 
       <section id="form">
        
-        <form class="col s12">
+        <form class="col s12" action="../../controllers/recuperarContraseña.php" method="POST">
             <div class="row center-align">
-                <h4 class="white-text">Reset Password</h4>
+                <h4 class="white-text">Recuperar Contraseña</h4>
             </div>
             <div class="row">
                 <div class="input-field">
-                    <input id="email" type="password" class="validate">
-                    <label for="email">Password</label>
+                    <input id="identificacion" type="number" class="validate" name="identificacion">
+                    <label for="identificacion">Identificacion</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field">
-                    <input id="password" type="password" class="validate">
-                    <label for="password">Repet-Password</label>
+                    <input id="email" type="email" class="validate" name="email">
+                    <label for="email">Correo</label>
                 </div>
             </div>
             <div class="row center-align">
-                <button class="btn waves-effect waves-light">
-                    Reset
+                <button class="btn waves-effect waves-light" type="submit">
+                    Enviar
                 </button>
             </div>
 									

@@ -1,3 +1,10 @@
+<?php
+    require_once("../../models/conexion.php");
+    require_once("../../models/eventos.php");
+    require_once("../../controllers/mostrarEventos.php");
+    require_once("../../controllers/sesionAdministrador.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +19,15 @@
      <header class="header evento">
         <div class="header-container">
             <div class="logo">
-                <span>Bike</span>Rental
+                <a href="../landing/index.php"><span>Bike</span></a>
             </div>
             <nav class="nav-tabs">
-                <a href="dashboardAdmin.html" class="nav-tab">Bicicletas</a>
-                <a href="dashboardAdminEvento.html" class="nav-tab active">Eventos</a>
+                <a href="dashboardAdmin.php" class="nav-tab">Bicicletas</a>
+                <a href="dashboardAdminEvento.php" class="nav-tab active">Eventos</a>
             </nav>
             <div class="user-menu">
                 <h5>Alejandro Hernandez</h5>
-                <div class="user-avatar"><a href="">X</a></div>
+                <div class="user-avatar"><a href="../../controllers/cerrarSesion.php">X</a></div>
             </div>
         </div>
         </header>
@@ -28,37 +35,47 @@
         <main>
             <div class="container">
 
-                <h1>Registrar Evento</h1>
+                <h1>Editar Evento</h1>
                 
-        <form class="registrar">
+        <!-- <form class="registrar" action="../../controllers/editarEvento.php" method="POST">
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" hidden>Id</label>
+                <input type="text" class="form-control" hidden="exampleInputEmail1" aria-describedby="emailHelp" name="id">
+               
+            </div>
+
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nombre">
                
             </div>
 
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Descripción</label>
-                <input type="number" class="form-control" id="exampleInputPassword1">
+                <input type="text" class="form-control" id="exampleInputPassword1" name="descripcion">
             </div>
 
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Fecha</label>
-                <input type="date" class="form-control" id="exampleInputPassword1">
+                <input type="date" class="form-control" id="exampleInputPassword1" name="fecha">
             </div>
 
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Hora</label>
-                <input type="time" class="form-control" id="exampleInputPassword1">
+                <input type="time" class="form-control" id="exampleInputPassword1" name="hora">
             </div>
 
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Lugar</label>
-                <input type="text" class="form-control" id="exampleInputPassword1">
+                <input type="text" class="form-control" id="exampleInputPassword1" name="lugar">
             </div>
            
             <button type="submit" class="btn btn-primary">Registrar</button>
-        </form>
+        </form> -->
+        <?php
+                cargarEventosId();
+        ?>
             </div>
         </main>
 
